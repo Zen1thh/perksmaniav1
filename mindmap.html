@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Inquiry Process Map</title>
+    <script type="module">
+      import { Transformer } from "https://cdn.jsdelivr.net/npm/@markmap/transform@latest";
+      import { Markmap } from "https://cdn.jsdelivr.net/npm/markmap-view@latest";
+
+      const md = `# INQUIRY
+
+## ACCEPT
+- Plan Rules  
+  (PA Approvals/Suspensions)
+  - ONLINE (provide walk-thru)
+  - FORM
+    - Delivery Options
+      - Secure File Upload
+      - Email
+      - Mail
+    - TAT
+      - 7-10 Business Days
+    - Payment Methods
+      - Cheque
+      - Direct Deposit
+
+## REJECT
+- Plan Rules
+  (PA Approvals/Suspensions)
+  - ONLINE (provide walk-thru)
+    - WITHDRAWAL CHECKLIST
+    - Fees
+    - MVA / MF
+    - Added Revenue
+  - FORM
+    - Delivery Options
+      - Secure File Upload
+      - Email
+      - Mail
+    - TAT
+      - 7-10 Business Days
+    - Payment Methods
+      - Cheque
+      - Direct Deposit
+    - Withdrawal Checklist
+      - Fees
+      - MVA / MF
+      - Added Revenue`;
+
+      const transformer = new Transformer();
+      const { root } = transformer.transform(md);
+      Markmap.create("#mindmap", null, root);
+    </script>
+  </head>
+  <body>
+    <svg id="mindmap"></svg>
+  </body>
+</html>
