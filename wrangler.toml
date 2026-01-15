@@ -1,0 +1,15 @@
+name = "perksmania"
+compatibility_date = "2026-01-15"
+
+[site]
+bucket = "./dist"
+
+# Build configuration
+[build]
+command = "npm run build"
+cwd = "./"
+watch_dirs = ["src"]
+
+# Environment variables (add your own as needed)
+[vars]
+ENVIRONMENT = "production"
